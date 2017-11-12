@@ -35,7 +35,7 @@ class PersonDAOImplTest {
     }
 
     @Test
-    void findOnePerson() {
+    void findOnePersonTest() {
         Person actual = null, expected = null;
 
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
@@ -62,7 +62,7 @@ class PersonDAOImplTest {
     }
 
     @Test
-    void findTwoPersons() {
+    void findTwoPersonsTest() {
         Person[] actual = new Person[2], expected = null;
 
         actual[0] = new Person();
@@ -87,7 +87,7 @@ class PersonDAOImplTest {
     }
 
     @Test
-    void findNoPersons() {
+    void findNoPersonsTest() {
         Person[] actual = new Person[0], expected = null;
 
         try {

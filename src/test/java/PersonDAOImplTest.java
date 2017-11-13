@@ -54,7 +54,7 @@ class PersonDAOImplTest {
 
         try {
             expected = personDAO.find("Maryja", "Babko")[0];
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.out.println("Exception: " + e.getMessage());
         }
 
@@ -79,7 +79,7 @@ class PersonDAOImplTest {
 
         try {
             expected = personDAO.find("Mikola", "Vasilieuski");
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.out.println("Exception: " + e.getMessage());
         }
 
@@ -92,7 +92,7 @@ class PersonDAOImplTest {
 
         try {
             expected = personDAO.find("432432", "e23e23");
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.out.println("Exception: " + e.getMessage());
         }
 

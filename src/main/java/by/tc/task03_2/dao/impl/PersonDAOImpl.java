@@ -16,8 +16,8 @@ public class PersonDAOImpl implements PersonDAO {
     private static final String USER = "root";
     private static final String PASSWORD = "root";
 
-    @Override
-    public Person[] find(String name, String surname) throws SQLException {
+    public Person[] find(String name, String surname) throws SQLException, ClassNotFoundException, IllegalAccessException, InstantiationException {
+        Class.forName("com.mysql.jdbc.Driver").newInstance();
         Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
         PreparedStatement statement = connection.prepareStatement("SELECT *FROM Persones WHERE NAME=? AND SURNAME=?");
         statement.setString(1, name);

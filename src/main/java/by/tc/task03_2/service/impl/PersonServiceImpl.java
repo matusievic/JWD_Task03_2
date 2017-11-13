@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public class PersonServiceImpl  implements PersonService {
     @Override
-    public Person[] find(String name, String surname) throws SQLException {
+    public Person[] find(String name, String surname) throws SQLException, IllegalAccessException, InstantiationException, ClassNotFoundException {
         PersonDAO personDAO = DAOFactory.getInstance().getPersonDAO();
         Person[] persons = personDAO.find(name, surname);
         return persons;

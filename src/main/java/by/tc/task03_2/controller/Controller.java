@@ -35,7 +35,7 @@ public class Controller extends HttpServlet {
         try {
             persons = ServiceFactory.getInstance().getPersonService().find(name, surname);
         } catch (Exception e) {
-            e.printStackTrace();
+            req.getRequestDispatcher("/500").forward(req, resp);
         }
 
         req.setAttribute("persons", persons);

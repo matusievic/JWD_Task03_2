@@ -29,4 +29,13 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>500</servlet-name>
+        <jsp-file>/WEB-INF/jsp/500.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>500</servlet-name>
+        <url-pattern>/500</url-pattern>
+    </servlet-mapping>
+
 </web-app>
